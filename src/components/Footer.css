@@ -1,14 +1,14 @@
-/* src/components/Footer.css */
+/* Desktop Footer Styles */
 .footer {
     background-color: #000;
     color: #fff;
     padding: 1rem;
-    position: relative;
     font-family: 'Press Start 2P', sans-serif;
     text-shadow: 0 0 5px #39FF14;
     display: flex;
-    justify-content: center; /* Center the overall content */
     align-items: center;
+    justify-content: center;
+    position: relative;
   }
   
   .footer-left {
@@ -21,5 +21,20 @@
     color: #39FF14;
     text-decoration: none;
     font-size: 1rem;
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      justify-content: center;
+    }
+    .footer-left {
+      position: static;
+      margin-bottom: 0.5rem;
+    }
+    .footer-center {
+      margin-bottom: 0.5rem;
+    }
   }
   

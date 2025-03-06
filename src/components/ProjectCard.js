@@ -24,12 +24,12 @@ function ProjectCard({ project }) {
 
   return (
     <motion.div 
-      className="card pixel-card"
+      className="card bg-dark text-white pixel-card"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.3 }}
-      onClick={handleCardClick}  // Attach click handler to trigger animation and sound
+      onClick={handleCardClick}
     >
       <img src={project.image} className="card-img-top" alt={project.title} />
       <div className="card-body">

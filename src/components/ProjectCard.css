@@ -1,12 +1,14 @@
 /* src/components/ProjectCard.css */
 .pixel-card {
-    background-color: #111;
-    border: 3px solid #39FF14;
-    color: #fff; /* Change text color to white */
-    font-family: 'Press Start 2P', sans-serif;
-    box-shadow: 0 0 8px #39FF14;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
+  cursor: pointer;
+  background-color: #111;
+  border: 3px solid #39FF14;
+  color: #fff; 
+  font-family: 'Press Start 2P', sans-serif;
+  box-shadow: 0 0 8px #39FF14;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
   
   .pixel-card:hover {
     transform: scale(1.05);

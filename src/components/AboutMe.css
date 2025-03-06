@@ -1,0 +1,22 @@
+.about-me {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Press Start 2P', sans-serif;
+    text-shadow: 0 0 10px #39FF14;
+    padding: 2rem;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #39FF14;
+    margin-bottom: 1rem;
+    image-rendering: pixelated;
+  }
+  
+  .neon-name {
+    color: #39FF14; 
+    text-shadow: 0 0 15px #39FF14;
+  }
+  

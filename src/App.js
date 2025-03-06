@@ -1,6 +1,6 @@
-// src/App.js
 import React from 'react';
 import Header from './components/Header';
+import AboutMe from './components/AboutMe';
 import ProjectCard from './components/ProjectCard';
 import './App.css';
 
@@ -32,6 +32,7 @@ function App() {
   return (
     <div className="container mt-5">
       <Header />
+      <AboutMe />
       <div className="row">
         {projects.map((project, index) => (
           <div key={index} className="col-md-4 mb-4">

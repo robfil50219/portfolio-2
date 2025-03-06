@@ -1,18 +1,38 @@
+/* src/components/Header.css */
 .pixel-header {
     background-color: #000;
-    color: #fff; /* Change text color to white */
-    text-align: center;
     padding: 2rem;
-    text-shadow: 0 0 10px #39FF14; 
+    display: flex;
+    align-items: center;
+    text-shadow: 0 0 10px #39FF14;
     font-family: 'Press Start 2P', sans-serif;
+    width: 100%;
+    margin: 0;
   }
   
-  .pixel-header h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+  .header-profile-pic {
+    width: 150px !important;
+    height: 150px !important;
+    aspect-ratio: 1 / 1; /* Ensures a square shape */
+    object-fit: cover;
+    border: 3px solid #39FF14;
+    border-radius: 50%;
+    margin-right: 20px;
   }
   
-  .pixel-header p {
-    font-size: 1.5rem;
-    margin-top: 0;
+  
+  
+  .header-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+  
+  /* Ensure header text is white */
+  .header-text h1,
+  .header-text p {
+    margin: 0 10px;
+    color: #fff;
   }  

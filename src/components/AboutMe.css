@@ -9,11 +9,13 @@
   .profile-pic {
     width: 150px;
     height: 150px;
+    object-fit: cover; 
     border-radius: 50%;
     border: 3px solid #39FF14;
     margin-bottom: 1rem;
     image-rendering: pixelated;
   }
+  
   
   .neon-name {
     color: #39FF14; 

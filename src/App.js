@@ -1,3 +1,4 @@
+// src/App.js
 import React from 'react';
 import Header from './components/Header';
 import AboutMe from './components/AboutMe';
@@ -33,6 +34,9 @@ function App() {
     <div className="container mt-5">
       <Header />
       <AboutMe />
+      <p className="projects-intro text-center" style={{ color: "#fff", fontFamily: 'Press Start 2P, sans-serif', textShadow: "0 0 10px #39FF14" }}>
+        Check Out Some Of My Projects Below!
+      </p>
       <div className="row">
         {projects.map((project, index) => (
           <div key={index} className="col-md-4 mb-4">

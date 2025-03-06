@@ -1,8 +1,8 @@
-// src/App.js
 import React from 'react';
 import Header from './components/Header';
 import AboutMe from './components/AboutMe';
 import ProjectCard from './components/ProjectCard';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -44,6 +44,7 @@ function App() {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

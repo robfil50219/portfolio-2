@@ -1,0 +1,17 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Press Start 2P', sans-serif;
+    text-shadow: 0 0 5px #39FF14;
+    margin-top: 2rem;
+  }
+  
+  .contact-link {
+    color: #39FF14;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    display: inline-block;
+  }
+  

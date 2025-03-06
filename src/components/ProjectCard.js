@@ -1,8 +1,19 @@
+// src/components/ProjectCard.js
 import React from 'react';
 import { motion } from 'framer-motion';
+import confetti from 'canvas-confetti'; // Import canvas-confetti
 import './ProjectCard.css';
 
 function ProjectCard({ project }) {
+  const handleCardClick = () => {
+    // Fire off a confetti animation when the card is clicked
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+  };
+
   return (
     <motion.div 
       className="card pixel-card"
@@ -10,6 +21,7 @@ function ProjectCard({ project }) {
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.3 }}
+      onClick={handleCardClick}  // Attach click handler
     >
       <img src={project.image} className="card-img-top" alt={project.title} />
       <div className="card-body">

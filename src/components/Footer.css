@@ -1,17 +1,25 @@
+/* src/components/Footer.css */
 .footer {
     background-color: #000;
     color: #fff;
     padding: 1rem;
-    text-align: center;
+    position: relative;
     font-family: 'Press Start 2P', sans-serif;
     text-shadow: 0 0 5px #39FF14;
-    margin-top: 2rem;
+    display: flex;
+    justify-content: center; /* Center the overall content */
+    align-items: center;
   }
   
-  .contact-link {
+  .footer-left {
+    position: absolute;
+    left: 1rem;
+    margin: 0;
+  }
+  
+  .footer-center {
     color: #39FF14;
     text-decoration: none;
-    margin-top: 0.5rem;
-    display: inline-block;
+    font-size: 1rem;
   }
   

@@ -1,8 +1,16 @@
+// src/components/ProjectCard.js
 import React from 'react';
+import { motion } from 'framer-motion';
 
 function ProjectCard({ project }) {
   return (
-    <div className="card mb-4 shadow-sm">
+    <motion.div 
+      className="card mb-4 shadow-sm"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.5 }}
+    >
       <img src={project.image} className="card-img-top" alt={project.title} />
       <div className="card-body">
         <h5 className="card-title">{project.title}</h5>
@@ -30,7 +38,7 @@ function ProjectCard({ project }) {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

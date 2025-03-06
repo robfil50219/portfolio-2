@@ -1,8 +1,11 @@
+// src/App.js
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import AboutMe from './components/AboutMe';
 import ProjectCard from './components/ProjectCard';
 import Footer from './components/Footer';
+import ContactPage from './pages/ContactPage';
 import './App.css';
 
 function App() {
@@ -31,21 +34,40 @@ function App() {
   ];
 
   return (
-    <div className="container mt-5">
-      <Header />
-      <AboutMe />
-      <p className="projects-intro text-center" style={{ color: "#fff", fontFamily: 'Press Start 2P, sans-serif', textShadow: "0 0 10px #39FF14" }}>
-        Check Out Some Of My Projects Below!
-      </p>
-      <div className="row">
-        {projects.map((project, index) => (
-          <div key={index} className="col-md-4 mb-4">
-            <ProjectCard project={project} />
-          </div>
-        ))}
+    <BrowserRouter>
+      <div className="container mt-5">
+        <Header />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <AboutMe />
+                <p
+                  className="projects-intro text-center"
+                  style={{
+                    color: "#fff",
+                    fontFamily: 'Press Start 2P, sans-serif',
+                    textShadow: "0 0 10px #39FF14"
+                  }}
+                >
+                  Check Out Some Of My Projects Below!
+                </p>
+                <div className="row">
+                  {projects.map((project, index) => (
+                    <div key={index} className="col-md-4 mb-4">
+                      <ProjectCard project={project} />
+                    </div>
+                  ))}
+                </div>
+              </>
+            }
+          />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 

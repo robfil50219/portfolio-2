@@ -6,7 +6,7 @@ import LoadingText from './LoadingText';
 
 function Header() {
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate(); 
 
   // Simulate a 3-second loading period
   useEffect(() => {
@@ -27,8 +27,8 @@ function Header() {
             src={process.env.PUBLIC_URL + '/images/profile-pic.JPG'}
             alt="Profile"
             className="header-profile-pic"
-            onClick={handleImageClick} // Added onClick handler
-            style={{ cursor: 'pointer' }} // Show pointer cursor
+            onClick={handleImageClick} 
+            style={{ cursor: 'pointer' }} 
             initial={{ rotate: 0 }}
             animate={loading ? { rotate: 360 } : { rotate: 0 }}
             transition={

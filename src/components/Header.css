@@ -1,65 +1,66 @@
+/* Desktop styles */
 .pixel-header {
-  background-color: #666; 
+  background-color: #666;
   padding: 2rem;
-  display: flex;
-  align-items: center;
-  text-shadow: 0 0 10px #39FF14;
-  font-family: 'Press Start 2P', sans-serif;
   width: 100%;
   margin: 0;
-  position: relative; 
-}
-
-.header-profile-pic {
-  width: 150px !important;
-  height: 150px !important;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border: 3px solid #39FF14;
-  border-radius: 50%;
-  margin-right: 20px;
+  /* No absolute positioning here; we let flexbox handle the layout */
 }
 
 .header-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  width: 100%;
+  /* Let the container’s height be determined by its content */
 }
 
-.header-text {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+/* Profile image on the left */
+.header-left {
+  margin-right: 20px;
+}
+
+/* Profile image styling */
+.header-profile-pic {
+  width: 150px !important;
+  height: 150px !important;
+  object-fit: cover;
+  border: 3px solid #39FF14;
+  border-radius: 50%;
+}
+
+/* Center the header text */
+.header-center {
+  flex: 1;
   text-align: center;
 }
 
-.header-text h1,
-.header-text p {
-  margin: 0 10px;
-  color: #fff;
+.header-center h1 {
+  color: #303030;
+  margin: 0;
+  font-family: 'Press Start 2P', sans-serif;
+  text-shadow: 0 0 10px #39FF14;
+  white-space: nowrap;
 }
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    position: static;
-    align-items: center;
-  }
-  .header-left {
-    position: static;
-    transform: none;
-    margin-bottom: 1rem;
-  }
-  .header-text {
-    position: static;
-    transform: none;
-    width: 100%;
+  .pixel-header {
+    padding: 1rem;
     text-align: center;
   }
-  .header-text h1 {
+  .header-container {
+    flex-direction: column;
+  }
+  .header-left {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .header-center {
+    width: 100%;
+  }
+  .header-center h1 {
     font-size: 1.8rem;
+    white-space: normal;
   }
 }
+

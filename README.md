@@ -42,3 +42,23 @@ This project is a professional developer portfolio that documents three key proj
    ```bash
    git clone git@github.com:robfil50219/portfolio-2.git
    ```
+
+2. **Install the dependencies:**
+
+   npm install
+
+**Running**
+To run the app locally, execute the following command:
+
+npm run start
+
+This will start the development server and open your portfolio in your default browser.
+
+Contact
+
+Feel free to get in touch:
+
+Email: robertfilep@gmail.com
+Phone: +47 92148156
+
+Alternatively, you can use the contact form on the portfolio website.

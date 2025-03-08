@@ -4,14 +4,12 @@
   padding: 2rem;
   width: 100%;
   margin: 0;
-  /* No absolute positioning here; we let flexbox handle the layout */
 }
 
 .header-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Let the container’s height be determined by its content */
 }
 
 /* Profile image on the left */

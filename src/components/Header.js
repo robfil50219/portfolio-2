@@ -1,17 +1,23 @@
-// src/components/Header.js
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom'; 
 import './Header.css';
 import LoadingText from './LoadingText';
 
 function Header() {
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate(); // Initialize navigate
 
   // Simulate a 3-second loading period
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 3000);
     return () => clearTimeout(timer);
   }, []);
+
+  // Handle profile image click to navigate home
+  const handleImageClick = () => {
+    navigate('/');
+  };
 
   return (
     <header className="pixel-header container-fluid">
@@ -21,6 +27,8 @@ function Header() {
             src={process.env.PUBLIC_URL + '/images/profile-pic.JPG'}
             alt="Profile"
             className="header-profile-pic"
+            onClick={handleImageClick} // Added onClick handler
+            style={{ cursor: 'pointer' }} // Show pointer cursor
             initial={{ rotate: 0 }}
             animate={loading ? { rotate: 360 } : { rotate: 0 }}
             transition={

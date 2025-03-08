@@ -1,6 +1,5 @@
-/* src/components/Header.css */
 .pixel-header {
-    background-color: #666; /* Solid dark grey */
+    background-color: #666; 
     padding: 2rem;
     display: flex;
     align-items: center;

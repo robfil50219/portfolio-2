@@ -1,4 +1,3 @@
-// src/components/ProjectCard.js
 import React from 'react';
 import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';

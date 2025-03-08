@@ -1,57 +1,91 @@
 /* Desktop styles */
 .pixel-header {
-  background-color: #666;
+  background-color: #666; 
   padding: 2rem;
+  font-family: 'Press Start 2P', sans-serif;
+  text-shadow: 0 0 10px #39FF14;
   width: 100%;
   margin: 0;
+  position: relative;
 }
 
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-/* Profile image on the left */
+/* Left side: profile image */
 .header-left {
-  margin-right: 20px;
+  
 }
 
-/* Profile image styling */
 .header-profile-pic {
   width: 150px !important;
   height: 150px !important;
   object-fit: cover;
   border: 3px solid #39FF14;
   border-radius: 50%;
+  margin-right: 20px;
 }
 
-/* Center the header text */
+/* Center: header text and underline */
 .header-center {
   flex: 1;
   text-align: center;
+  position: relative;
 }
 
 .header-center h1 {
-  color: #303030;
+  color: #343333;
   margin: 0;
-  font-family: 'Press Start 2P', sans-serif;
+  font-size: 3rem;
   text-shadow: 0 0 10px #39FF14;
   white-space: nowrap;
 }
 
+/* Spans: inline on desktop */
+.header-text-part1,
+.header-text-part2 {
+  display: inline;
+}
+
+/* Underline animation */
+.underline {
+  display: block;
+  height: 2px;
+  background: #39FF14;
+  width: 0;
+  margin: 0.5rem auto 0 auto;
+  animation: underlineGrow 1s ease-out forwards;
+  animation-delay: 1s;
+}
+
+@keyframes underlineGrow {
+  to {
+    width: 100%;
+  }
+}
+
+/* Right side: empty div to balance layout */
+.header-right {
+  width: 150px; 
+}
+
 /* Mobile adjustments */
 @media (max-width: 768px) {
-  .pixel-header {
-    padding: 1rem;
-    text-align: center;
-  }
   .header-container {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .header-left {
     margin-right: 0;
     margin-bottom: 1rem;
+  }
+  .header-right {
+    display: none;
   }
   .header-center {
     width: 100%;
@@ -60,5 +94,15 @@
     font-size: 1.8rem;
     white-space: normal;
   }
+  /* On mobile, stack text spans */
+  .header-text-part1,
+  .header-text-part2 {
+    display: block;
+  }
+  .underline {
+    width: 100%;
+    animation: none;
+  }
 }
+
 

@@ -37,7 +37,13 @@ function Header() {
           {loading && <LoadingText />}
         </div>
         <div className="header-center">
-          <h1>Welcome To My Portfolio</h1>
+          <h1>
+            <span className="header-text-part1">Welcome To My</span> <span className="header-text-part2">Portfolio</span>
+          </h1>
+          <span className="underline"></span>
+        </div>
+        <div className="header-right">
+          {/* Empty div to balance layout */}
         </div>
       </div>
     </header>

@@ -1,56 +1,64 @@
 .pixel-header {
-    background-color: #666; 
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    text-shadow: 0 0 10px #39FF14;
-    font-family: 'Press Start 2P', sans-serif;
-    width: 100%;
-    margin: 0;
+  background-color: #666; 
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  text-shadow: 0 0 10px #39FF14;
+  font-family: 'Press Start 2P', sans-serif;
+  width: 100%;
+  margin: 0;
+  position: relative; /* Needed for absolute positioning of children */
+}
+
+.header-profile-pic {
+  width: 150px !important;
+  height: 150px !important;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 3px solid #39FF14;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.header-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.header-text h1,
+.header-text p {
+  margin: 0 10px;
+  color: #fff;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .pixel-header {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
   }
-  
   .header-profile-pic {
-    width: 150px !important;
-    height: 150px !important;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border: 3px solid #39FF14;
-    border-radius: 50%;
-    margin-right: 20px;
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
-  
   .header-text {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: nowrap;
-    white-space: nowrap;
+    position: static; /* Let it flow normally on mobile */
+    transform: none;
+    width: 100%;
   }
-  
   .header-text h1,
   .header-text p {
-    margin: 0 10px;
-    color: #fff;
+    margin: 0.5rem 0;
   }
-  
-  /* Mobile adjustments */
-  @media (max-width: 768px) {
-    .pixel-header {
-      flex-direction: column;
-      padding: 1rem;
-      text-align: center;
-    }
-    .header-profile-pic {
-      margin-right: 0;
-      margin-bottom: 1rem;
-    }
-    .header-text {
-      flex-direction: column;
-      white-space: normal;
-    }
-    .header-text h1,
-    .header-text p {
-      margin: 0.5rem 0;
-    }
-  }
-  
+}  

@@ -7,7 +7,7 @@
   font-family: 'Press Start 2P', sans-serif;
   width: 100%;
   margin: 0;
-  position: relative; /* Needed for absolute positioning of children */
+  position: relative; 
 }
 
 .header-profile-pic {

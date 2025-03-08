@@ -1,6 +1,6 @@
 /* src/components/Header.css */
 .pixel-header {
-    background-color: #000;
+    background-color: #666; /* Solid dark grey */
     padding: 2rem;
     display: flex;
     align-items: center;
@@ -13,7 +13,7 @@
   .header-profile-pic {
     width: 150px !important;
     height: 150px !important;
-    aspect-ratio: 1 / 1; /* Ensures a square shape */
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border: 3px solid #39FF14;
     border-radius: 50%;
@@ -28,7 +28,6 @@
     white-space: nowrap;
   }
   
-  /* Ensure header text is white */
   .header-text h1,
   .header-text p {
     margin: 0 10px;
@@ -48,7 +47,7 @@
     }
     .header-text {
       flex-direction: column;
-      white-space: normal; /* allow wrapping */
+      white-space: normal;
     }
     .header-text h1,
     .header-text p {

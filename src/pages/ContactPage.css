@@ -60,3 +60,23 @@
     margin-top: 1rem;
     font-size: 1.2rem;
   }  
+
+  .contact-phone {
+    font-size: 1.1rem;
+    color: white; 
+    font-family: 'Press Start 2P', sans-serif;
+    text-shadow: 0 0 5px #39FF14;
+  }
+  
+  .contact-phone a {
+    color: #39FF14;
+    text-decoration: none;
+    pointer-events: none; /* Disable clicking by default (desktop) */
+  }
+  
+  /* Enable clicking on mobile devices (e.g., max-width: 768px) */
+  @media (max-width: 768px) {
+    .contact-phone a {
+      pointer-events: auto;
+    }
+  }

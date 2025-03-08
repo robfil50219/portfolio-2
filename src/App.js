@@ -35,36 +35,38 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="container mt-5">
+      <div className="app-container">
         <Header />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <AboutMe />
-                <p
-                  className="projects-intro text-center"
-                  style={{
-                    color: "#fff",
-                    fontFamily: 'Press Start 2P, sans-serif',
-                    textShadow: "0 0 10px #39FF14"
-                  }}
-                >
-                  Check Out Some Of My Projects Below!
-                </p>
-                <div className="row">
-                  {projects.map((project, index) => (
-                    <div key={index} className="col-md-4 mb-4">
-                      <ProjectCard project={project} />
-                    </div>
-                  ))}
-                </div>
-              </>
-            }
-          />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
+        <div className="content container mt-5">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <AboutMe />
+                  <p
+                    className="projects-intro text-center"
+                    style={{
+                      color: "#fff",
+                      fontFamily: 'Press Start 2P, sans-serif',
+                      textShadow: "0 0 10px #39FF14"
+                    }}
+                  >
+                    Check Out Some Of My Projects Below!
+                  </p>
+                  <div className="row">
+                    {projects.map((project, index) => (
+                      <div key={index} className="col-md-4 mb-4">
+                        <ProjectCard project={project} />
+                      </div>
+                    ))}
+                  </div>
+                </>
+              }
+            />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </BrowserRouter>

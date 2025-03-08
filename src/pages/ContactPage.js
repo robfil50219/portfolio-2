@@ -98,6 +98,10 @@ function ContactPage() {
         <button type="submit" className="btn btn-primary mt-3">Send Message</button>
       </form>
       {feedback && <p className="feedback text-center mt-3">{feedback}</p>}
+      {/* Phone number element added here */}
+      <p className="contact-phone text-center mt-3">
+        Or call me at: <a href="tel:+4792148156">+47 921 48 156</a>
+      </p>
       {/* Back to main page button */}
       <button type="button" className="btn btn-secondary mt-3" onClick={goBack}>
         Back to Main Page

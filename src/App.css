@@ -1,21 +1,15 @@
-/* src/App.css */
-.App-header {
-  background-color: #000;
-  min-height: 100vh;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.app-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #39FF14;
-  text-shadow: 0 0 10px #39FF14;
-  padding: 20px;
+  min-height: 100vh; 
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-p {
-  font-size: 1.2rem;
+.content {
+  flex: 1; 
 }

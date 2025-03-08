@@ -1,6 +1,6 @@
-/* Desktop Footer Styles */
+/* src/components/Footer.css */
 .footer {
-    background-color: #000;
+    background-color: #666; /* Solid dark grey */
     color: #fff;
     padding: 1rem;
     font-family: 'Press Start 2P', sans-serif;
@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    width: 100%;
   }
   
   .footer-left {
